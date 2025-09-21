@@ -12,6 +12,9 @@ class HabitSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class CheckInSerializer(serializers.ModelSerializer):
+    habit_name = serializers.CharField(source='habit.name', read_only=True)
+    
+
     class Meta:
         model = CheckIn
-        fields = '__all__'
+        fields = ['id', 'habit', 'habit_name', 'date', 'status']

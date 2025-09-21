@@ -26,7 +26,7 @@ class Habit(models.Model):
 class CheckIn(models.Model):
     habit = models.ForeignKey(Habit, on_delete=models.CASCADE, related_name="checkins")
     date = models.DateField()
-    note = models.TextField(blank=True, null=True)
+    status = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.habit.name} - {self.date}"
+        return f"{self.habit.name} - {self.date} - {'Done' if self.status else 'Missed'}"
