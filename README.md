@@ -25,3 +25,6 @@ Django + DRF API for Habit Hero.
 - /api/checkins/    (GET, POST)
 - /api/habits/{id}/analytics/ (GET)
 
+## Demo Link
+https://drive.google.com/file/d/1eM_rXpGllyqX-UNFDFxr3lwDQFVeXbwc/view?usp=sharing
+
